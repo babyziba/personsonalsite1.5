@@ -1,0 +1,57 @@
+/* ==== Global / Box Model Fix ==== */
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+/* Remove default body margin (hw7 3d) */
+body{ margin: 0; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; color: #111827; background: #f3f4f6; }
+
+h1, h2, h3{ margin: 0 0 .5rem 0; }
+h2{ margin-top: 0; } /* hw7 3c */
+
+/* ==== Content Wrapper (hw7 1–3) ==== */
+.content-wrap{
+  max-width: 950px; /* hw7 2d: use max-width instead of width */
+  margin: 0 auto;
+  padding: 50px; /* hw7 3a */
+  overflow: hidden; /* hw7 4f */
+  background: #ffffff;
+}
+
+/* Header styles + image */
+header{ background: #0f172a; color: #fff; }
+header .content-wrap{ background: transparent; }
+header h1, header h2{ margin: 0; } /* hw7 4d */
+.profile-img{
+  border-radius: 50%; /* hw7 4c */
+}
+
+/* Columns (hw7 6) */
+.column-narrow{
+  width: 30%;
+  float: left;
+  padding-right: 3%;
+  min-height: 175px;
+}
+.column-wide{
+  width: 70%;
+  float: left;
+  min-height: 225px;
+}
+
+/* Sections */
+#work .content-wrap, #education .content-wrap{ background: #fff; }
+.job, .school{ margin-top: 1rem; }
+
+/* Footer (hw7 3e–3g) */
+footer{ background: #111827; color: #fff; text-align: center; }
+footer .content-wrap{ background: transparent; }
+.contact-info a{
+  padding: 10px;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+}
+.contact-info a:hover{ text-decoration: underline; }
